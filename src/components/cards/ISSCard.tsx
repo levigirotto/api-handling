@@ -5,6 +5,7 @@ import axios from "axios";
 import "leaflet/dist/leaflet.css";
 import ApiCard from "@/components/cards/ApiCard.tsx"
 import MapUpdater from "@/components/MapUpdater";
+import { Button } from "../ui/button";
 
 const issIcon = L.icon({
   iconUrl: "/iss.png",
@@ -16,8 +17,7 @@ const issIcon = L.icon({
 export default function ISSCard() {
   const [position, setPosition] = useState<[number, number]>([0, 0]);
 
-  useEffect(() => {
-    async function fetch() {
+  async function fetch() {
       try {
         const res = await axios.get(
           "http://api.open-notify.org/iss-now.json"
@@ -29,9 +29,8 @@ export default function ISSCard() {
       }
     }
 
+  useEffect(() => {
     fetch();
-    const interval = setInterval(fetch, 5000);
-    return () => clearInterval(interval);
   }, []);
 
   return (
@@ -56,6 +55,9 @@ export default function ISSCard() {
           </Marker>
           <MapUpdater position={position} />
         </MapContainer>
-    }/>
+        
+      }
+      footer={<Button onClick={fetch}>Fetch</Button>}
+      />
   );
 }
