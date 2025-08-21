@@ -5,7 +5,6 @@ import ExcuseCard from '@/components/cards/ExcuseCard.tsx';
 import ISSCard from "@/components/cards/ISSCard.tsx"
 import PistonCard from "@/components/cards/PistonCard.tsx"
 import GeoapifyCard from "@/components/cards/GeoapifyCard.tsx"
-import GamesCard from "@/components/cards/GamesCard.tsx"
 
 const cards = [
   DogCard, 
@@ -15,7 +14,6 @@ const cards = [
   ISSCard,
   PistonCard,
   GeoapifyCard,
-  GamesCard,
 ];
 
 export default function CardGrid() {
