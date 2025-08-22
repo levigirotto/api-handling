@@ -2,9 +2,10 @@ import DogCard from '@/components/cards/DogCard.tsx';
 import CatCard from '@/components/cards/CatCard.tsx';
 import DadJokeCard from '@/components/cards/DadJokeCard.tsx';
 import ExcuseCard from '@/components/cards/ExcuseCard.tsx';
-import ISSCard from "@/components/cards/ISSCard.tsx"
-import PistonCard from "@/components/cards/PistonCard.tsx"
-import GeoapifyCard from "@/components/cards/GeoapifyCard.tsx"
+import ISSCard from "@/components/cards/ISSCard.tsx";
+import PistonCard from "@/components/cards/PistonCard.tsx";
+import GeoapifyCard from "@/components/cards/GeoapifyCard.tsx";
+import BibleCard from "@/components/cards/BibleCard.tsx";
 
 const cards = [
   DogCard, 
@@ -14,6 +15,7 @@ const cards = [
   ISSCard,
   PistonCard,
   GeoapifyCard,
+  BibleCard,
 ];
 
 export default function CardGrid() {

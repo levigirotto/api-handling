@@ -37,7 +37,7 @@ export default function DadJokeCard() {
             value={joke}
             readOnly
             rows={5}
-            className="w-full max-w-md p-3 text-center"
+            className="w-full max-w-md p-2 text-center"
           />
         ) : (
           <p>Loading…</p>

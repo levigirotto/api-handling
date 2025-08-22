@@ -68,7 +68,7 @@ export default function PistonCard() {
         setOutput("Error executing code.");
         console.error(error);
     }
-};
+  };
 
   return (
     <ApiCard
