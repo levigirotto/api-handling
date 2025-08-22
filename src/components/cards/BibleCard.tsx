@@ -89,7 +89,7 @@ export default function BibleCard() {
 
     async function fetch() {
         try {
-            const res = await axios.get(`https://bible-api.com/${book}+${chapter}:${verse}?translation=kjv`);
+            const res = await axios.get(`https://bible-api.com/${book}+${chapter}:${verse}?translation=kjv&single_chapter_book_matching=indifferent`);
             const data = res.data.verses[0].text;
             setContent(data);
         } catch (err) {
@@ -145,7 +145,7 @@ export default function BibleCard() {
                         onValueChange={async (chapterNumber) => {
                             setChapter(chapterNumber);
                             try {
-                                const res = await axios.get(`https://bible-api.com/${book}+${chapterNumber}?translation=kjv`);
+                                const res = await axios.get(`https://bible-api.com/${book}+${chapterNumber}?translation=kjv&single_chapter_book_matching=indifferent`);
                                 setVerseAmount(res.data.verses.length);
                             } catch (err) {
                                 console.log(err);
