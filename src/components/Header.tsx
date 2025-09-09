@@ -1,12 +1,29 @@
-import Logo from "/logo-no-background.png"
+import LogoDark from "/logo-no-background-dark.png";
+import LogoLight from "/logo-no-background-light.png";
+import ThemeToggle from "@/components/ThemeToggle.tsx";
+import { useTheme } from "next-themes";
+import { useEffect, useState } from "react";
 
-export function Header() {
+export default function Header() {
+  const { theme } = useTheme();
+  const [mounted, setMounted] = useState(false);
+
+  useEffect(() => {
+    setMounted(true);
+  }, []);
+  if (!mounted) return null;
+
+  const logo = theme === "dark" ? LogoDark : LogoLight;
+
   return (
-    <header className="fixed top-0 left-0 right-0 z-50 flex items-center bg-zinc-950 justify-center w-full py-4">
-      <div className="container mx-auto px-4 flex justify-center">
-        <img src={Logo} alt="Website Logo" className="h-8 w-auto absolute left-4" />
-        <h2 className="py-0.5 text-xl font-semibold text-zinc-50">API Cards</h2>
+    <header className="fixed top-0 left-0 right-0 z-10 flex items-center bg-background w-full p-3">
+      <div className="w-full flex justify-between items-center gap-1">
+        <div className="flex items-center gap-2">
+          <img src={logo} alt="Website Logo" className="h-8 w-8" />
+          <h2 className="mx-auto font-semibold">API Cards</h2>
+        </div>
+        <ThemeToggle />
       </div>
     </header>
-  )
+  );
 }

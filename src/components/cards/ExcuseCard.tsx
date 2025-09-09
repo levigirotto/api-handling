@@ -31,7 +31,7 @@ export default function ExcuseCard() {
         excuse ? (
           <>
             <p>Sorry, the fetching failed because...</p>
-            <p className="text-lg font-semibold text-yellow-200">{excuse}</p>
+            <p className="text-lg font-semibold text-chart-3">{excuse}</p>
           </>
         ) : (
           <p>Loading…</p>

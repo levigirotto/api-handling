@@ -61,7 +61,7 @@ export default function ISSCard() {
             </Marker>
             <MapUpdater position={position} />
           </MapContainer>
-          <div className="container flex flex-col gap-2 bg-zinc-800 p-4 rounded-xl text-zinc-400">
+          <div className="container flex flex-col gap-2 bg-secondary p-4 rounded-xl text-muted-foreground">
             <p><strong>Coordinates:</strong><br />Lat: {position[0]},<br />Lon: {position[1]}</p>
             <p><strong>Altitude:</strong> {altitude.toFixed(2)}km</p>
             <p><strong>Velocity:</strong> {velocity.toFixed(2)}km/h</p>

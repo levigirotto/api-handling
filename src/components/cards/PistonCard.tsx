@@ -83,7 +83,7 @@ export default function PistonCard() {
                 value={code}
                 onChange={(e) => setCode(e.target.value)}
                 placeholder={"e.g., " + placeholder}
-                className="col-span-2 font-mono bg-zinc-950"
+                className="col-span-2 font-mono bg-background"
             />
             <Select onValueChange={setLanguage} defaultValue={language}>
                 <SelectTrigger>
@@ -125,7 +125,7 @@ export default function PistonCard() {
             <Button onClick={handleSubmit}>Submit</Button>
             <h2 className="col-span-2 font-semibold py-2">Output</h2>
             <Textarea
-              className="font-mono bg-zinc-950 col-span-2"
+              className="font-mono bg-background col-span-2"
               readOnly
               value={output}
               rows={5}

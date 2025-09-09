@@ -20,7 +20,7 @@ const cards = [
 
 export default function CardGrid() {
   return (
-    <div className='w-[90vw] md:w-[80vw] space-y-4 gap-6 p-4 columns-1 sm:columns-1 md:columns-2 lg:columns-3 xl:columns-4'>
+    <div className='w-[90vw] md:w-[80vw] space-y-3 gap-5 p-4 columns-1 sm:columns-1 md:columns-2 lg:columns-3 xl:columns-4'>
       {cards.map((Card, index) => (
         <Card key={index} />
        ))}

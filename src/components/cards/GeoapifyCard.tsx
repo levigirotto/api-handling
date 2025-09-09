@@ -40,7 +40,7 @@ export default function GeoapifyCard() {
                 <label>Type a location</label>
                 <div className="flex gap-1">
                     <Input 
-                        className="bg-zinc-950" 
+                        className="bg-background" 
                         placeholder="e.g., Sao Paulo, Brazil"
                         onChange={(e) => {
                             const formatted = e.target.value.replaceAll(" ", "%");
