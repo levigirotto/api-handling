@@ -20,7 +20,7 @@ export default function Header() {
       <div className="w-full flex justify-between items-center gap-1">
         <div className="flex items-center gap-2">
           <img src={logo} alt="Website Logo" className="h-8 w-8" />
-          <h2 className="mx-auto font-semibold">API Cards</h2>
+          <h2 className="text-lg font-semibold">API Cards</h2>
         </div>
         <ThemeToggle />
       </div>
