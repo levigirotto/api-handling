@@ -16,7 +16,7 @@ export default function Header() {
   const logo = theme === "dark" ? LogoDark : LogoLight;
 
   return (
-    <header className="fixed top-0 left-0 right-0 z-10 flex items-center bg-background w-full p-3">
+    <header className="fixed top-0 left-0 right-0 z-10 flex items-center bg-background h-12 w-full p-3">
       <div className="w-full flex justify-between items-center gap-1">
         <div className="flex items-center gap-2">
           <img src={logo} alt="Website Logo" className="h-8 w-8" />
