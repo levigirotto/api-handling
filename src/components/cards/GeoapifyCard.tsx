@@ -1,5 +1,6 @@
 import { useEffect, useState } from "react";
 import { MapContainer, TileLayer, Marker, Popup } from "react-leaflet";
+import L from "leaflet";
 import axios from "axios";
 import "leaflet/dist/leaflet.css";
 import ApiCard from "@/components/cards/ApiCard.tsx"
@@ -8,6 +9,13 @@ import { Input } from "@/components/ui/input";
 import { Button } from "@/components/ui/button"
 
 const API_KEY = "9da296e52adb4d1ab868b513f0361d72";
+
+const pinIcon = L.icon({
+  iconUrl: "/pin.png",
+  iconSize: [35, 35],
+  iconAnchor: [20, 40],
+  popupAnchor: [0, -20],
+});
 
 export default function GeoapifyCard() {
   const [position, setPosition] = useState<[number, number]>([0, 0]);
@@ -61,7 +69,7 @@ export default function GeoapifyCard() {
                   attribution='&copy; OpenStreetMap contributors'
                   url="https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png"
               />
-              <Marker position={position}>
+              <Marker position={position} icon={pinIcon}>
                   <Popup>Requested location</Popup>
               </Marker>
               <MapUpdater position={position} />

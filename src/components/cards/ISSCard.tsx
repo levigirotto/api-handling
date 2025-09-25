@@ -9,7 +9,7 @@ import MapUpdater from "@/components/MapUpdater";
 const issIcon = L.icon({
   iconUrl: "/iss.png",
   iconSize: [60, 60],
-  iconAnchor: [20, 20],
+  iconAnchor: [30, 30],
   popupAnchor: [0, -20],
 });
 
