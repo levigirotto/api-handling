@@ -182,7 +182,7 @@ export default function BibleCard() {
                     value={content}
                     readOnly
                     rows={6}
-                    className={`bg-stone-800 text-yellow-100 w-full max-w-md p-2 ${content === "" ? "hidden" : ""}`}
+                    className={`bg-brown text-brown-foreground w-full max-w-md p-2 ${content === "" ? "hidden" : ""}`}
                 />
             </div>
         }
